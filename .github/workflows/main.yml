@@ -32,4 +32,5 @@ jobs:
         run: java --version
       - name: build
         run: mvn package
-        
+      - name: tomcat deploy
+        run: curl -u -v admin:admin -T 'http://ec2-3-109-139-109.ap-south-1.compute.amazonaws.com:8080/manager/text/deploy?path=/github_actions_petclinic/update=true'  

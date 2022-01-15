@@ -33,4 +33,5 @@ jobs:
       - name: build
         run: mvn package
       - name: tomcat deployment
-        run: curl -u -v admin:admin -T /home/runner/work/spring-framework-petclinic/spring-framework-petclinic/target/petclinic.war 'http://ec2-3-109-139-109.ap-south-1.compute.amazonaws.com:8080/manager/text/deploy?path=/Github_actions_petclinic&update=true'  
+        run: curl -u -v admin:admin -T /home/runner/work/spring-framework-petclinic/spring-framework-petclinic/target/petclinic.war 'http://ec2-3-109-139-109.ap-south-1.compute.amazonaws.com:8080/manager/text/deploy?path=/deploy-petclinic
+        &update=true'  
